@@ -40,7 +40,7 @@ export default function Home() {
           <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight bg-gradient-to-r from-[#FF7EB9] via-[#7AC7FF] to-[#FF7EB9]/80 bg-clip-text text-[#4B4B4B] text-center">
             作品集
           </h2>
-          <p className="mt-2 text-[#4B4B4B]/80 text-center">以下是我近期完成的五個專案。</p>
+          <p className="mt-2 text-[#4B4B4B]/80 text-center">以下是我近年完成的五個專案。</p>
           <PortfolioGrid />
         </div>
       </section>
