@@ -76,7 +76,18 @@ function PortfolioGrid() {
   );
 }
 
-function ProjectCard({ title, description, image, github, demo, tools, linkLabel, story }: any) {
+interface ProjectCardProps {
+  title: string;
+  description: string;
+  image: string;
+  github: string;
+  demo?: string;
+  tools: string;
+  linkLabel?: string;
+  story: string;
+}
+
+function ProjectCard({ title, description, image, github, demo, tools, linkLabel, story }: ProjectCardProps) {
   return (
     <div className="group perspective">
       <div className="relative h-80 w-full [transform-style:preserve-3d] transition-transform duration-700 group-hover:rotate-y-180 rounded-[24px] shadow-lg">
@@ -145,7 +156,7 @@ function ActivitiesSection() {
             ▶
           </button>
           <div id="activities-track" className="flex snap-x snap-mandatory gap-4 sm:gap-6 pr-4">
-            {activities.map((e: any) => (
+            {activities.map((e: ActivityCardProps) => (
               <ActivityCard key={e.title} {...e} />
             ))}
           </div>
@@ -155,7 +166,13 @@ function ActivitiesSection() {
   );
 }
 
-function ActivityCard({ title, image, description }: any) {
+interface ActivityCardProps {
+  title: string;
+  image: string;
+  description: string;
+}
+
+function ActivityCard({ title, image, description }: ActivityCardProps) {
   const { ref, visible } = useReveal<HTMLDivElement>();
   return (
     <article
@@ -182,7 +199,7 @@ function InterestsSection() {
       <div className="mx-auto max-w-6xl">
         <h2 className="text-center text-2xl sm:text-3xl font-bold text-[#4B4B4B] tracking-tight">興趣</h2>
         <div className="mt-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {interests.map((it: any, idx: number) => (
+          {interests.map((it: Omit<InterestCardProps, 'index'>, idx: number) => (
             <InterestCard key={it.title} {...it} index={idx} />
           ))}
         </div>
@@ -191,7 +208,14 @@ function InterestsSection() {
   );
 }
 
-function InterestCard({ image, title, description, index }: any) {
+interface InterestCardProps {
+  image: string;
+  title: string;
+  description: string;
+  index: number;
+}
+
+function InterestCard({ image, title, description, index }: InterestCardProps) {
   const { ref, visible } = useReveal<HTMLDivElement>();
   return (
     <article
