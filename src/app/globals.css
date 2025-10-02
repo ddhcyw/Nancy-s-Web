@@ -43,3 +43,16 @@ html {
 
 /* helper: hide scrollbar but keep scroll for specific containers */
 /* remove helper if not needed; keeping here for reuse */
+
+/* 3D Transform utilities for portfolio cards */
+.perspective {
+  perspective: 1000px;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}

@@ -76,7 +76,18 @@ function PortfolioGrid() {
   );
 }
 
-function ProjectCard({ title, description, image, github, demo, tools, linkLabel, story }: any) {
+interface ProjectCardProps {
+  title: string;
+  description: string;
+  image: string;
+  github: string;
+  demo?: string;
+  tools: string;
+  linkLabel?: string;
+  story: string;
+}
+
+function ProjectCard({ title, description, image, github, demo, tools, linkLabel, story }: ProjectCardProps) {
   return (
     <div className="group perspective">
       <div className="relative h-80 w-full [transform-style:preserve-3d] transition-transform duration-700 group-hover:rotate-y-180 rounded-[24px] shadow-lg">
@@ -155,7 +166,13 @@ function ActivitiesSection() {
   );
 }
 
-function ActivityCard({ title, image, description }: any) {
+interface ActivityCardProps {
+  title: string;
+  image: string;
+  description: string;
+}
+
+function ActivityCard({ title, image, description }: ActivityCardProps) {
   const { ref, visible } = useReveal<HTMLDivElement>();
   return (
     <article
@@ -191,7 +208,14 @@ function InterestsSection() {
   );
 }
 
-function InterestCard({ image, title, description, index }: any) {
+interface InterestCardProps {
+  image: string;
+  title: string;
+  description: string;
+  index: number;
+}
+
+function InterestCard({ image, title, description, index }: InterestCardProps) {
   const { ref, visible } = useReveal<HTMLDivElement>();
   return (
     <article
