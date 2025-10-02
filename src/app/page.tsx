@@ -156,7 +156,7 @@ function ActivitiesSection() {
             ▶
           </button>
           <div id="activities-track" className="flex snap-x snap-mandatory gap-4 sm:gap-6 pr-4">
-            {activities.map((e: any) => (
+            {activities.map((e: ActivityCardProps) => (
               <ActivityCard key={e.title} {...e} />
             ))}
           </div>
@@ -199,7 +199,7 @@ function InterestsSection() {
       <div className="mx-auto max-w-6xl">
         <h2 className="text-center text-2xl sm:text-3xl font-bold text-[#4B4B4B] tracking-tight">興趣</h2>
         <div className="mt-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {interests.map((it: any, idx: number) => (
+          {interests.map((it: Omit<InterestCardProps, 'index'>, idx: number) => (
             <InterestCard key={it.title} {...it} index={idx} />
           ))}
         </div>
