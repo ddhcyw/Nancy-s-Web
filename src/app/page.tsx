@@ -63,7 +63,7 @@ const projects = [
   { title: "SuiLa 服飾店", description: "服飾店APP設計與實作", image: "/images/suila.png", github: "https://github.com/zhlhu322/mid_5_SuiLa", demo: "https://youtu.be/y_CN40moX8E", linkLabel: "查看Demo", tools: "React Native, JavaScript, Figma", story: "在這個專案中，我和伙伴一起設計版面並轉換為實際可用的APP，讓我更熟悉react native。" },
   { title: "狠狗 Bad Dog", description: "融合生活知識-Unity 2D冒險射擊遊戲", image: "/images/maddog.jpg", github: "https://github.com/zhlhu322/Unity_MadDog", demo: "https://youtu.be/oiCDGnuyhBg", linkLabel: "查看Demo", tools: "Unity, C#, Procreate", story: "從零開始實作2D遊戲，和伙伴一起寫企劃，我完成了主角程式/可互動物件程式/生命值程式。" },
   { title: "Moody Baby", description: "Line Bot-給學生之情緒價值機器人", image: "/images/moodybaby.jpg", github: "https://github.com/ddhcyw/MoodyBaby", demo: "https://lin.ee/YKmcceE", linkLabel: "查看專案", tools: "Node.js, LINE Messaging API, Python", story: "學會串接LINE Messaging API，我設計了情緒回饋卡，完成了雙圖文選單和情緒回饋功能。" },
-  { title: "數位奇境 Digital Odyssey", description: "Unity 2D教育RPG解謎遊戲", image: "/images/do.png", github: "https://github.com/", demo: "https://www.youtube.com/watch?v=Uj9JFRkuzKY", linkLabel: "查看Demo", tools: "Unity, C#, Procreate, Qwen (Hugging Face), Flask (Python)", story: "和伙伴一起寫企劃，我負責AI助手的系統和場景程式。" },
+  { title: "數位奇境 Digital Odyssey", description: "Unity 2D教育RPG解謎遊戲", image: "/images/dtdo.png", github: "https://github.com/", demo: "https://www.youtube.com/watch?v=Uj9JFRkuzKY", linkLabel: "查看Demo", tools: "Unity, C#, Procreate, Qwen (Hugging Face), Flask (Python)", story: "和伙伴一起寫企劃，我負責AI助手的系統和場景程式。" },
 ];
 
 function PortfolioGrid() {
