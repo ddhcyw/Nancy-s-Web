@@ -232,7 +232,7 @@ function ContactSection() {
     <section id="contact" className="py-16 bg-[#F0F8FF]">
       <div className="mx-auto max-w-3xl px-6">
         <h2 className="text-2xl sm:text-3xl font-bold text-[#4B4B4B] tracking-tight text-center">聯絡我</h2>
-        <p className="mt-2 text-[#4B4B4B]/80 text-center">歡迎透過表單或社群與我聯繫。</p>
+        <p className="mt-2 text-[#4B4B4B]/80 text-center">歡迎透過表單或社群與我聯繫</p>
         <form className="mt-6 grid grid-cols-1 gap-4">
           <div>
             <label className="block text-sm text-[#4B4B4B]">名字</label>
