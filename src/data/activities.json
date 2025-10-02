@@ -1,0 +1,16 @@
+[
+  { "title": "高中管樂社社長", "image": "/images/band.jpg", "description": "帶領管樂社舉辦多場音樂表演與比賽" },
+  { "title": "高中班聯會活動長", "image": "/images/class_event.jpg", "description": "規劃與執行校內大型活動" },
+  { "title": "高中志願服務隊", "image": "/images/volunteer.jpg", "description": "至偏鄉國小服務，舉辦活動與課程" },
+  { "title": "大一大二系籃", "image": "/images/basketball.jpg", "description": "女子籃球校長盃比賽奪冠" },
+  { "title": "大一數位營隊輔", "image": "/images/camp.jpg", "description": "擔任營隊助教，協助學員完成專案" },
+  { "title": "大二系學會公關長", "image": "/images/public_relation.jpg", "description": "負責對外交流與合作活動" },
+  { "title": "個別指導講師", "image": "/images/teacher.jpg", "description": "擔任補習班講師，教授課程" },
+  { "title": "大二宿營總召", "image": "/images/camp_leader.jpg", "description": "統籌宿營活動，帶領新生更快融入大學生活" },
+  { "title": "大二數位營總召", "image": "/images/digital_camp.jpg", "description": "總負責人，規劃三天營隊課程與活動" },
+  { "title": "LINE Bot 開發實戰工作坊", "image": "/images/linebot.jpg", "description": "兩場次共四天，學習開發LINE Bot" },
+  { "title": "Fun AI Camp", "image": "/images/aicamp.jpg", "description": "參與AI主題營隊，學習並實作ML專案" },
+  { "title": "Langports語言學校", "image": "/images/language_school.jpg", "description": "澳洲遊學一個月" }
+]
+
+

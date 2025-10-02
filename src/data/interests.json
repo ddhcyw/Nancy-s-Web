@@ -1,0 +1,7 @@
+[
+  { "image": "/images/fitness.jpg", "title": "健身", "description": "透過重量訓練與運動保持保持身心靈健康" },
+  { "image": "/images/books.jpg", "title": "閱讀", "description": "偏好學習與科技相關書籍，持續精進自我" },
+  { "image": "/images/travel.jpg", "title": "旅行", "description": "探索不同文化與美食，透過攝影紀錄旅程" },
+  { "image": "/images/cooking.jpg", "title": "料理", "description": "對料理有濃厚興趣，嘗試不同健康食譜" }
+]
+
