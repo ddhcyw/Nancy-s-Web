@@ -99,17 +99,11 @@ function ProjectCard({ title, description, image, github, demo, tools, linkLabel
           <div className="p-4 flex flex-col justify-between flex-1">
             <h3 className="text-lg font-bold text-[#4B4B4B]">{title}</h3>
             <p className="mt-1 text-sm text-[#4B4B4B]/80">{description}</p>
-            <div className="mt-4 flex gap-2">
-              <a href={github} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-sm px-3 py-1.5 rounded-full bg-gradient-to-r from-[#FF7EB9] via-[#7AC7FF] to-[#FF7EB9]/80 text-white hover:scale-105 transition-all">
-                <Image src="/images/github-mark.png" alt="GitHub" width={16} height={16} className="invert" />
-                GitHub
-              </a>
-              {demo && (
-                <a href={demo} target="_blank" rel="noreferrer" className="text-sm px-3 py-1.5 rounded-full bg-gradient-to-r from-[#7AC7FF] via-[#FF7EB9]/80 to-[#7AC7FF] text-white hover:scale-105 transition-all">
-                  {linkLabel || "查看 Demo"}
-                </a>
-              )}
-            </div>
+            
+            <div className="mt-4 text-sm">
+            <p className="font-semibold text-[#FF7EB9]">使用工具：</p>
+            <p>{tools}</p>
+          </div>
           </div>
         </div>
 
@@ -119,9 +113,27 @@ function ProjectCard({ title, description, image, github, demo, tools, linkLabel
             <h3 className="text-lg font-bold text-[#4B4B4B]">{title}</h3>
             <p className="mt-2 text-sm text-[#4B4B4B]/80">{story}</p>
           </div>
-          <div className="mt-4 text-sm">
-            <p className="font-semibold text-[#FF7EB9]">使用工具：</p>
-            <p>{tools}</p>
+          <div className="mt-4 flex justify-end gap-2">
+            <a
+              href={github}
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-2 text-sm px-3 py-1.5 rounded-full bg-[#696969] text-white hover:scale-105 transition-all"
+            >
+              <Image
+                src="/images/github-mark.png"
+                alt="GitHub"
+                width={16}
+                height={16}
+                className="invert"
+              />
+            </a>
+
+            {demo && (
+              <a href={demo} target="_blank" rel="noreferrer" className="text-sm px-3 py-1.5 rounded-full bg-gradient-to-r from-[#7AC7FF] via-[#FF7EB9]/80 to-[#7AC7FF] text-white hover:scale-105 transition-all">
+                {linkLabel || "查看 Demo"}
+              </a>
+            )}
           </div>
         </div>
       </div>
