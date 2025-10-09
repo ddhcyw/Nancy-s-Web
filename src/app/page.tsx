@@ -92,7 +92,7 @@ function ProjectCard({ title, description, image, github, demo, tools, linkLabel
     <div className="group perspective">
       <div className="relative h-80 w-full [transform-style:preserve-3d] transition-transform duration-1000 group-hover:rotate-y-180 rounded-[24px] shadow-lg">
         {/* 正面 */}
-        <div className="absolute inset-0 backface-hidden bg-white rounded-[24px] border border-[#7AC7FF]/30 overflow-hidden flex flex-col">
+        <div className="absolute inset-0 bg-white rounded-[24px] border border-[#7AC7FF]/30 overflow-hidden flex flex-col">
           <div className="relative h-48 w-full">
             <Image src={image} alt={title} fill className="object-cover p-4" />
           </div>

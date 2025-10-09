@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import { useState } from "react";
 import activities from "@/data/activities.json";
 import interests from "@/data/interests.json";
 import { useReveal } from "@/lib/useReveal";
@@ -89,16 +88,11 @@ interface ProjectCardProps {
 }
 
 function ProjectCard({ title, description, image, github, demo, tools, linkLabel, story }: ProjectCardProps) {
-  const [isFlipped, setIsFlipped] = useState(false);
-
   return (
-    <div 
-      className="group perspective cursor-pointer"
-      onClick={() => setIsFlipped(!isFlipped)}
-    >
-      <div className={`relative h-80 w-full transition-transform duration-1000 rounded-[24px] shadow-lg ${isFlipped ? 'rotate-y-180' : ''}`}>
+    <div className="group perspective">
+      <div className="relative h-80 w-full [transform-style:preserve-3d] transition-transform duration-1000 group-hover:rotate-y-180 rounded-[24px] shadow-lg">
         {/* 正面 */}
-        <div className={`absolute inset-0 bg-white rounded-[24px] border border-[#7AC7FF]/30 overflow-hidden flex flex-col transition-opacity duration-1000 ${isFlipped ? 'opacity-0' : 'opacity-100'}`}>
+        <div className="absolute inset-0 bg-white rounded-[24px] border border-[#7AC7FF]/30 overflow-hidden flex flex-col">
           <div className="relative h-48 w-full">
             <Image src={image} alt={title} fill className="object-cover p-4" />
           </div>
@@ -113,7 +107,7 @@ function ProjectCard({ title, description, image, github, demo, tools, linkLabel
         </div>
 
         {/* 背面 */}
-        <div className={`absolute inset-0 bg-white rounded-[24px] border border-[#7AC7FF]/30 p-6 flex flex-col justify-between transition-opacity duration-1000 ${isFlipped ? 'opacity-100' : 'opacity-0'}`}>
+        <div className="absolute inset-0 backface-hidden rotate-y-180 bg-white rounded-[24px] border border-[#7AC7FF]/30 p-6 flex flex-col justify-between">
           <div>
             <h3 className="text-lg font-bold text-[#4B4B4B]">{title}</h3>
             <p className="mt-2 text-sm text-[#4B4B4B]/80">{story}</p>
@@ -124,7 +118,6 @@ function ProjectCard({ title, description, image, github, demo, tools, linkLabel
               target="_blank"
               rel="noreferrer"
               className="flex items-center gap-2 text-sm px-3 py-1.5 rounded-full bg-[#696969] text-white hover:scale-105 transition-all"
-              onClick={(e) => e.stopPropagation()}
             >
               <Image
                 src="/images/github-mark.png"
@@ -136,7 +129,7 @@ function ProjectCard({ title, description, image, github, demo, tools, linkLabel
             </a>
 
             {demo && (
-              <a href={demo} target="_blank" rel="noreferrer" className="text-sm px-3 py-1.5 rounded-full bg-gradient-to-r from-[#7AC7FF] via-[#FF7EB9]/80 to-[#7AC7FF] text-white hover:scale-105 transition-all" onClick={(e) => e.stopPropagation()}>
+              <a href={demo} target="_blank" rel="noreferrer" className="text-sm px-3 py-1.5 rounded-full bg-gradient-to-r from-[#7AC7FF] via-[#FF7EB9]/80 to-[#7AC7FF] text-white hover:scale-105 transition-all">
                 {linkLabel || "查看 Demo"}
               </a>
             )}
