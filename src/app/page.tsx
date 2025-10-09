@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import { useState } from "react";
 import activities from "@/data/activities.json";
 import interests from "@/data/interests.json";
 import { useReveal } from "@/lib/useReveal";
