@@ -94,7 +94,13 @@ function ProjectCard({ title, description, image, github, demo, tools, linkLabel
         {/* 正面 */}
         <div className="absolute inset-0 bg-white rounded-[24px] border border-[#7AC7FF]/30 overflow-hidden flex flex-col">
           <div className="relative h-48 w-full">
-            <Image src={image} alt={title} fill className="object-cover p-4" />
+            {demo ? (
+              <a href={demo} target="_blank" rel="noreferrer" className="block h-full w-full">
+                <Image src={image} alt={title} fill className="object-cover p-4 cursor-pointer hover:opacity-90 transition-opacity" />
+              </a>
+            ) : (
+              <Image src={image} alt={title} fill className="object-cover p-4" />
+            )}
           </div>
           <div className="p-4 flex flex-col justify-between flex-1">
             <h3 className="text-lg font-bold text-[#4B4B4B]">{title}</h3>
