@@ -102,14 +102,16 @@ function ProjectCard({ title, description, image, github, demo, tools, linkLabel
               <Image src={image} alt={title} fill className="object-cover p-4" />
             )}
           </div>
-          <div className="p-4 flex flex-col justify-between flex-1">
-            <h3 className="text-lg font-bold text-[#4B4B4B]">{title}</h3>
-            <p className="mt-1 text-sm text-[#4B4B4B]/80">{description}</p>
+          <div className="px-4 pt-4 pb-6 flex flex-col justify-between flex-1">
+            <div>
+              <h3 className="text-lg font-bold text-[#4B4B4B]">{title}</h3>
+              <p className="mt-1 text-sm text-[#4B4B4B]/80">{description}</p>
+            </div>
             
-            <div className="mt-4 mb-4 sm:mb-0 text-sm">
-            <p className="font-semibold text-[#FF7EB9]">使用工具：</p>
-            <p className="mt-1">{tools}</p>
-          </div>
+            <div className="mt-4 text-sm">
+              <p className="font-semibold text-[#FF7EB9]">使用工具：</p>
+              <p className="mt-1">{tools}</p>
+            </div>
           </div>
         </div>
 
