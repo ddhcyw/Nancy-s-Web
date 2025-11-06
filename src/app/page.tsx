@@ -106,9 +106,9 @@ function ProjectCard({ title, description, image, github, demo, tools, linkLabel
             <h3 className="text-lg font-bold text-[#4B4B4B]">{title}</h3>
             <p className="mt-1 text-sm text-[#4B4B4B]/80">{description}</p>
             
-            <div className="mt-4 text-sm">
+            <div className="mt-4 mb-4 sm:mb-0 text-sm">
             <p className="font-semibold text-[#FF7EB9]">使用工具：</p>
-            <p>{tools}</p>
+            <p className="mt-1">{tools}</p>
           </div>
           </div>
         </div>
